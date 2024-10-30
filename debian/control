@@ -1,0 +1,30 @@
+Source: oss2
+Section: python
+Priority: optional
+Maintainer: coolshou <coolshou2060@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ python3-setuptools,
+ python3-all, 
+ python3-crcmod, python3-pycryptodome, 
+ python3-aliyunsdkcore (>=2.16), python3-aliyunsdkkms (>=2.16)
+#Testsuite: autopkgtest-pkg-python
+Standards-Version: 4.6.2
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/oss2
+#Vcs-Git: https://salsa.debian.org/debian/oss2.git
+
+Package: python3-oss2
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${python3:Depends},
+ ${misc:Depends},
+Suggests:
+ python-oss2-doc,
+Description: Alibaba Cloud Object Storage (Python 3)
+ Alibaba Cloud Object Storage Python SDK 2.x
+ .
+ This package installs the library for Python 3.
